@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> enkhjin's cute calculator </title>
+    <link rel="stylesheet" href="./cutecalculator.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' 
+    rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Fredoka One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
+</head>
+<body>
+    <div>
+        <div class="row1 row1-2" >
+            <div class="margin1"> calci </div>
+            <div class="margin1">  
+                <img src="./dots.png" width="5" height="20" />
+            </div>
+        </div>
+        <div class="row2 " id="answer"> </div>
+        <div class="row3">
+            <div class="direction-row">
+                <div class="button" onclick="clearAnswer()">C</div>
+                <div class="button" >%</div>
+                <div class="button" onclick="divideNumbers()">/</div>
+                <div class="button" onclick="multiplyNumbers()">X</div>
+            </div>
+            <div class="direction-row">
+                <div class="button" onclick="clickNum(7)">7</div>
+                <div class="button" onclick="clickNum(8)">8</div>
+                <div class="button" onclick="clickNum(9)">9</div>
+                <div class="button" onclick="minusNumbers()">-</div>
+            </div>
+            <div class="direction-row">
+                <div class="button"onclick="clickNum(4)">4</div>
+                <div class="button" onclick="clickNum(5)">5</div>
+                <div class="button" onclick="clickNum(6)">6</div>
+                <div class="button" onclick="plusNumbers()">+</div>
+            </div>
+            <div class="direction-row">
+                <div>
+                    <div class="direction-row">
+                        <div class="button" onclick="clickNum(1)">1</div>
+                        <div class="button" onclick="clickNum(2)">2</div>
+                        <div class="button" onclick="clickNum(3)">3</div>
+                    </div>
+                    <div class="direction-row">
+                        <div class="button" onclick="clickNum(0)">0</div>
+                        <div class="button">.</div>
+                        <div class="button" > 
+                            <img src="./Group_1.png" width="25" height="20" />
+                        
+                        </div>
+                    </div>
+                </div>
+                <div class="tallbutton" onclick="showAnswer()">=</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    let answer = document.getElementById("answer")
+    let number1, hasOp = false,
+        op;
+
+    function clickNum(num) {
+        if (hasOp == true) {
+            answer.innerHTML = num;
+            hasOp = false;
+        } else {
+            answer.innerHTML = answer.innerHTML + num
+        }
+    }
+    
+
+    function showAnswer() {
+        if (op == "+") {
+            let a = Number(number1) + Number(answer.innerHTML);
+            console.log(a)
+            answer.innerHTML = a
+        } else if (op == "-") {
+            let a = Number(number1) - Number(answer.innerHTML);
+            answer.innerHTML = a
+        }
+    }
+
+    function clearAnswer() {
+        answer.innerHTML = ""
+    }
+
+    function plusNumbers() {
+        number1 = answer.innerHTML;
+        hasOp = true;
+        op = "+"
+    }
+    function minusNumbers() {
+        number1 = answer.innerHTML;
+        hasOp = true;
+        op = "-" 
+    }
+    function multiplyNumbers() {
+        number1 = answer.innerHTML;
+        hasOp = true;
+        op = "*" 
+    }
+    function divideNumbers() {
+        number1 = answer.innerHTML;
+        hasOp = true;
+        op = "/" }
+    
+    
+
+    
+    
+      
+       
+   
+
+</script>
+</html>
