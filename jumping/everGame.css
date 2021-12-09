@@ -1,0 +1,19 @@
+.bot {
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.red{
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+.container {
+    height: 300px;
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
