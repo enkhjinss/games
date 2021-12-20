@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: grey;
+}
+.around {
+    width: 100px;
+    height: 200px;
+    background-color: white;
+    border: solid black;
+    border-radius: 50%;
+    border-width: 0px 100px 0px 0px;
+    position: relative;
+    left: 50%;
+    animation-name: rotation;
+    animation: rotation 7s infinite;
+}
+
+@keyframes rotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);}
+}
+
+.one {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    position: absolute;
+    border: solid black 40px;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    
+}
+.two {
+    height: 20px;
+    width: 20px;
+    background-color:black;
+    position: absolute;
+    border: solid white 40px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+}
+
+main {
+    height: 400px;
+    width: 200px;
+    background-color: white;
+    border: solid black;
+    border-radius: 50%;
+    border-width: 0px 200px 0px 0px;
+   
+}
+
